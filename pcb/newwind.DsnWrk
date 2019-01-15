@@ -1,0 +1,8 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=newwind.PrjPCB
+[Project2]
+ProjectPath=panel.PrjPCB
+[Project3]
+ProjectPath=sensor.PrjPCB
