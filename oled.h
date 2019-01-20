@@ -8,7 +8,10 @@
 
 #ifndef _OLED_H
 #define _OLED_H
+
+#include <avr/pgmspace.h>
 #include "comm.h"
+
 #define OLED_DC (1<<PF0)
 #define OLED_DC_LOW  PORTF&=~OLED_DC
 #define OLED_DC_HIGH PORTF|=OLED_DC
