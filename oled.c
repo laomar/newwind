@@ -128,11 +128,11 @@ void oledZh(uchar x,uchar y,uchar start,uchar num,const uchar *data){
 	for (uchar i=0;i<num;i++){
 		oledPos(x+16*i+2, y);
 		for(uchar j=0;j<16;j++){
-		    oledData(data[(start+i)*32+j]);
+		    oledData(pgm_read_byte(data+(start+i)*32+j));
 		}
 		oledPos(x+16*i+2, y+1);
 		for(uchar j=0;j<16;j++){
-		    oledData(data[(start+i)*32+j+16]);
+		    oledData(pgm_read_byte(data+(start+i)*32+j+16));
 		}
 	}
 }
@@ -141,11 +141,11 @@ void oledZhInverse(uchar x,uchar y,uchar start,uchar num,const uchar *data){
 	for (uchar i=0;i<num;i++){
 		oledPos(x+16*i+2, y);
 		for(uchar j=0;j<16;j++){
-		    oledData(~data[(start+i)*32+j]);
+		    oledData(~pgm_read_byte(data+(start+i)*32+j));
 		}
 		oledPos(x+16*i+2, y+1);
 		for(uchar j=0;j<16;j++){
-		    oledData(~data[(start+i)*32+j+16]);
+		    oledData(~pgm_read_byte(data+(start+i)*32+j+16));
 		}
 	}
 }
